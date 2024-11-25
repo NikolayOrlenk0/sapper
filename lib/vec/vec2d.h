@@ -19,7 +19,7 @@ Vec2d operator+ (const Vec2d& lhs, const Vec2d& rhs);
 Vec2d operator- (const Vec2d& lhs, const Vec2d& rhs);
 Vec2d operator* (const Vec2d& lhs, double rhs);
 Vec2d operator* (double rhs, const Vec2d& lhs);
-
+bool operator != (Vec2d lhs, Vec2d rhs);
 double length (const Vec2d& v);
 
 #endif  // VEC2D_H
