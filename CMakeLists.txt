@@ -4,7 +4,6 @@ project(interface)
 set(CMAKE_CXX_STANDARD 17)
 
 add_executable(sapper
-        src/main.cpp
         lib/Graph_lib/Graph.cpp
         lib/Graph_lib/GUI.cpp
         lib/Graph_lib/Window.cpp
@@ -13,6 +12,9 @@ add_executable(sapper
         lib/Graph_lib/ext/graph.cpp
         lib/table/bombs.cpp
         lib/table/table.cpp
+#        tests/main.cpp
+        src/main.cpp
+
 
 )
 

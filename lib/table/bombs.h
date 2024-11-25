@@ -6,4 +6,5 @@ class Bombs{
 public:
     vector<Vec2d> bombs_kord;
     void bomb_XY(int n);
+    int size();
 };

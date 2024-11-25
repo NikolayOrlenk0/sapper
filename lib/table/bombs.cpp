@@ -11,4 +11,8 @@ void Bombs::bomb_XY(int n){
     }
 }
 
+int Bombs::size(){
+    return bombs_kord.size();
+}
+
 
