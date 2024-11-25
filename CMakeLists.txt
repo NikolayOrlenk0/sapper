@@ -25,7 +25,6 @@ find_library(COCOA_LIBRARY Cocoa)
 
 include_directories(SYSTEM ${FLTK_INCLUDE_DIR})
 include_directories(SYSTEM lib)
-
 target_link_libraries(${TARGET} ${FLTK_LIBRARIES})
 
 install(TARGETS ${TARGET})
