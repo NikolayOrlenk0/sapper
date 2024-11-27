@@ -18,7 +18,12 @@ int main(){
     }
     for(int i = 0; i < table.size(); i++) {
         for (int j = 0; j < table[i].size(); j++){
-            cout << table[i][j] << " ";
+            if(table[i][j].hasMine) {
+                cout << -1 << " ";
+            }
+            else{
+                cout << table[i][j].adjacentMines << " ";
+            }
         }
         cout << '\n';
     }

@@ -14,6 +14,7 @@ add_executable(sapper
         lib/table/table.cpp
 #        tests/main.cpp
         src/main.cpp
+        lib/table/grid/grid.h
 
 
 )
