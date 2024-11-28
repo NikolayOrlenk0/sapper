@@ -19,7 +19,7 @@ int main(){
     for(int i = 0; i < table.size(); i++) {
         for (int j = 0; j < table[i].size(); j++){
             if(table[i][j].hasMine) {
-                cout << -1 << " ";
+                cout << "B" << " ";
             }
             else{
                 cout << table[i][j].adjacentMines << " ";
@@ -31,5 +31,4 @@ int main(){
     for(auto& i : t){
         cout << i.x << " " << i.y << '\n';
     }
-
 }

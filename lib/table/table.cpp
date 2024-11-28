@@ -36,8 +36,7 @@ vector<Vec2d> Table::open_nulls(Vec2d point){
 
                         if ((!_table[point.x + dx][point.y + dy].isRevealed) &&
                             (Vec2d(point.x + dx, point.y + dy) != prev) &&
-                            _table[point.x + dx][point.y + dy].adjacentMines == 0) {
-
+                            (_table[prev.x][prev.y].adjacentMines == 0 || (prev.x == -1 && prev.y == -1))) {
                             nulls.push(make_pair(Vec2d(point.x + dx, point.y + dy), point));
                             _table[point.x + dx][point.y + dy].isRevealed = true;
                         }
