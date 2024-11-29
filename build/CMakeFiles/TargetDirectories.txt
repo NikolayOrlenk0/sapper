@@ -1,0 +1,7 @@
+/home/kolya/projects/sapper/build/CMakeFiles/sapper.dir
+/home/kolya/projects/sapper/build/CMakeFiles/edit_cache.dir
+/home/kolya/projects/sapper/build/CMakeFiles/rebuild_cache.dir
+/home/kolya/projects/sapper/build/CMakeFiles/list_install_components.dir
+/home/kolya/projects/sapper/build/CMakeFiles/install.dir
+/home/kolya/projects/sapper/build/CMakeFiles/install/local.dir
+/home/kolya/projects/sapper/build/CMakeFiles/install/strip.dir

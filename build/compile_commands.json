@@ -1,0 +1,44 @@
+[
+{
+  "directory": "/home/kolya/projects/sapper/build",
+  "command": "/usr/bin/g++ -I/home/kolya/projects/sapper/lib -isystem /home/kolya/projects/sapper/fltk-1.3.8 -g -o CMakeFiles/sapper.dir/src/main.cpp.o -c /home/kolya/projects/sapper/src/main.cpp",
+  "file": "/home/kolya/projects/sapper/src/main.cpp",
+  "output": "CMakeFiles/sapper.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/kolya/projects/sapper/build",
+  "command": "/usr/bin/g++ -I/home/kolya/projects/sapper/lib -isystem /home/kolya/projects/sapper/fltk-1.3.8 -g -o CMakeFiles/sapper.dir/lib/Graph_lib/Graph.cpp.o -c /home/kolya/projects/sapper/lib/Graph_lib/Graph.cpp",
+  "file": "/home/kolya/projects/sapper/lib/Graph_lib/Graph.cpp",
+  "output": "CMakeFiles/sapper.dir/lib/Graph_lib/Graph.cpp.o"
+},
+{
+  "directory": "/home/kolya/projects/sapper/build",
+  "command": "/usr/bin/g++ -I/home/kolya/projects/sapper/lib -isystem /home/kolya/projects/sapper/fltk-1.3.8 -g -o CMakeFiles/sapper.dir/lib/Graph_lib/GUI.cpp.o -c /home/kolya/projects/sapper/lib/Graph_lib/GUI.cpp",
+  "file": "/home/kolya/projects/sapper/lib/Graph_lib/GUI.cpp",
+  "output": "CMakeFiles/sapper.dir/lib/Graph_lib/GUI.cpp.o"
+},
+{
+  "directory": "/home/kolya/projects/sapper/build",
+  "command": "/usr/bin/g++ -I/home/kolya/projects/sapper/lib -isystem /home/kolya/projects/sapper/fltk-1.3.8 -g -o CMakeFiles/sapper.dir/lib/Graph_lib/Window.cpp.o -c /home/kolya/projects/sapper/lib/Graph_lib/Window.cpp",
+  "file": "/home/kolya/projects/sapper/lib/Graph_lib/Window.cpp",
+  "output": "CMakeFiles/sapper.dir/lib/Graph_lib/Window.cpp.o"
+},
+{
+  "directory": "/home/kolya/projects/sapper/build",
+  "command": "/usr/bin/g++ -I/home/kolya/projects/sapper/lib -isystem /home/kolya/projects/sapper/fltk-1.3.8 -g -o CMakeFiles/sapper.dir/lib/vec/vec2d.cpp.o -c /home/kolya/projects/sapper/lib/vec/vec2d.cpp",
+  "file": "/home/kolya/projects/sapper/lib/vec/vec2d.cpp",
+  "output": "CMakeFiles/sapper.dir/lib/vec/vec2d.cpp.o"
+},
+{
+  "directory": "/home/kolya/projects/sapper/build",
+  "command": "/usr/bin/g++ -I/home/kolya/projects/sapper/lib -isystem /home/kolya/projects/sapper/fltk-1.3.8 -g -o CMakeFiles/sapper.dir/lib/poly/poly.cpp.o -c /home/kolya/projects/sapper/lib/poly/poly.cpp",
+  "file": "/home/kolya/projects/sapper/lib/poly/poly.cpp",
+  "output": "CMakeFiles/sapper.dir/lib/poly/poly.cpp.o"
+},
+{
+  "directory": "/home/kolya/projects/sapper/build",
+  "command": "/usr/bin/g++ -I/home/kolya/projects/sapper/lib -isystem /home/kolya/projects/sapper/fltk-1.3.8 -g -o CMakeFiles/sapper.dir/lib/Graph_lib/ext/graph.cpp.o -c /home/kolya/projects/sapper/lib/Graph_lib/ext/graph.cpp",
+  "file": "/home/kolya/projects/sapper/lib/Graph_lib/ext/graph.cpp",
+  "output": "CMakeFiles/sapper.dir/lib/Graph_lib/ext/graph.cpp.o"
+}
+]

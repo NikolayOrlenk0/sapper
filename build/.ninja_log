@@ -1,0 +1,9 @@
+# ninja log v6
+2	520	1732738521376088994	CMakeFiles/sapper.dir/src/main.cpp.o	bdfef9ae707d9457
+4	382	1732177915249746112	CMakeFiles/sapper.dir/lib/vec/vec2d.cpp.o	64f509fbaf6dbdec
+4	1479	1732177915249746112	CMakeFiles/sapper.dir/lib/poly/poly.cpp.o	31c081758ee7a3ce
+3	1688	1732177915248746107	CMakeFiles/sapper.dir/lib/Graph_lib/GUI.cpp.o	1cbad66520c7c306
+2	2291	1732177915247746102	CMakeFiles/sapper.dir/lib/Graph_lib/Graph.cpp.o	49b8a30f1c49e2d6
+4	1514	1732177915248746107	CMakeFiles/sapper.dir/lib/Graph_lib/Window.cpp.o	26c7a6d59fae331
+5	1547	1732177915250746116	CMakeFiles/sapper.dir/lib/Graph_lib/ext/graph.cpp.o	8b2d88743780e155
+520	626	1732738521894100341	sapper	7c0df8d841415ed9
