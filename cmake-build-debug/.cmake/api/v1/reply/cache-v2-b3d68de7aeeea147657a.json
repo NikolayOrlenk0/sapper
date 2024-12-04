@@ -79,7 +79,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "28"
+			"value" : "30"
 		},
 		{
 			"name" : "CMAKE_CACHE_PATCH_VERSION",
@@ -91,7 +91,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "1"
+			"value" : "5"
 		},
 		{
 			"name" : "CMAKE_COLOR_DIAGNOSTICS",
@@ -911,7 +911,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28"
+			"value" : "/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -1414,6 +1414,22 @@
 			"value" : "/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/usr/lib/libm.tbd"
 		},
 		{
+			"name" : "OPENGL_GLU_INCLUDE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Include for the OpenGL GLU library"
+				}
+			],
+			"type" : "PATH",
+			"value" : "/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/System/Library/Frameworks/OpenGL.framework"
+		},
+		{
 			"name" : "OPENGL_INCLUDE_DIR",
 			"properties" : 
 			[
@@ -1423,7 +1439,7 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "Include for OpenGL on OS X"
+					"value" : "Include for OpenGL"
 				}
 			],
 			"type" : "PATH",
@@ -1439,7 +1455,7 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "OpenGL library for OS X"
+					"value" : "OpenGL GL library"
 				}
 			],
 			"type" : "FILEPATH",
@@ -1455,7 +1471,7 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "GLU library for OS X (usually same as OpenGL library)"
+					"value" : "OpenGL GLU library"
 				}
 			],
 			"type" : "FILEPATH",
@@ -1856,6 +1872,22 @@
 			],
 			"type" : "FILEPATH",
 			"value" : "X11_Xdamage_LIB-NOTFOUND"
+		},
+		{
+			"name" : "X11_Xdbe_INCLUDE_PATH",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a file."
+				}
+			],
+			"type" : "PATH",
+			"value" : "/opt/homebrew/include"
 		},
 		{
 			"name" : "X11_Xdmcp_INCLUDE_PATH",

@@ -2,3 +2,4 @@
 -- Configuring done (0.1s)
 -- Generating done (0.0s)
 -- Build files have been written to: /Users/ivan/Documents/GitHub/sapper/cmake-build-debug
+CMake File API: /Users/ivan/Documents/GitHub/sapper/cmake-build-debug: failed to load from '/Users/ivan/Documents/GitHub/sapper/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-f17607c4e8b3b5db2279.json'
