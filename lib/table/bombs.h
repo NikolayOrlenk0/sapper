@@ -1,10 +1,10 @@
 #pragma once
-#include <std_lib_facilities.h>
+#include <vector>
 #include "../vec/vec2d.h"
 
 class Bombs{
 public:
-    vector<Vec2d> bombs_kord;
+    std::vector<Vec2d> bombs_kord;
     void bomb_XY(int n);
     int size();
 };

@@ -12,22 +12,26 @@ struct Cell
     bool hasMine = false;       // Есть ли мина 
     bool isRevealed = false;    // Открыта ли клетка 
     bool hasFlag = false;       // Установлен ли флаг 
-    int adjacentMines = 0;     // Количество соседних мин 
+    int adjacentMines = 0;      // Количество соседних мин 
+
+    Cell(bool h_m, bool isR, bool h_f, int mines): hasMine{h_m}, isRevealed{isR}, hasFlag{h_f}, adjacentMines{mines};
 };
+
 
 struct Settings
 {
     std::tuple<int, int> resolution;
     std::tuple<int,int> size_of_table;
-    int count_of_bombs;
+    int difficult;
 };
 
 class CustomButton : public Fl_Button { 
 public: 
- 
-    CustomButton(int X, int Y, int W, int H, Cell &cell): Fl_Button(X, Y, W, H), cell(cell) {}
     
+    Fl_Button *button;
+    Cell *cell;
     
+    CustomButton(int X, int Y, int W, int H, Cell *c): button{new Fl_Button(X, Y, W, H)}, cell{c};
      
     int handle(int event) override {
         switch (event) { 
@@ -45,9 +49,6 @@ public:
     } 
  
 private: 
-
-    Cell *cell;
-    Fl_Button *button;
 
     void handleLeftClick() { 
         if (cell->isRevealed || cell->hasFlag) return; 
@@ -85,7 +86,7 @@ struct My_window: CustomButton
     std::vector<std::vector<Cell>> table;
     std::vector<std::vector<CustomButton>> playground;
     
-    void generation_table()
+    void generation_table();
 
     private:
     void quit () { hide(); }
