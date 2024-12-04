@@ -18,4 +18,5 @@ public:
     std::vector<Vec2d> open_nulls(Vec2d point);
     int size();
     std::vector<Cell>& operator[](size_t i);
+
 };
