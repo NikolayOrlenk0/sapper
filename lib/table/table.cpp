@@ -3,6 +3,7 @@
 #include <iostream>
 #include <queue>
 #include <vector>
+#include <string>
 
 
 using namespace std;
@@ -24,10 +25,18 @@ void Table::fill_table(Vec2d bomb){
 }
 
 
-vector<Vec2d> Table::open_nulls(Vec2d point){
+vector<Vec2d> Table::open_cells(Vec2d point){
+  	vector<Vec2d> v;
+  	if(_table[point.x][point.y].hasMine){
+          cerr << "YOU ARE DOLBAEB" << endl;
+    }
+    else if(_table[point.x][point.y].adjacentMines > 0){
+    	v.emplace_back(point);
+        return v;
+    }
     queue<pair<Vec2d, Vec2d>> nulls;
     nulls.push(make_pair(Vec2d(point.x, point.y), Vec2d(-1, -1)));
-    vector<Vec2d> v;
+
     while(!nulls.empty()) {
         point = nulls.front().first;
         Vec2d prev = nulls.front().second;
@@ -71,4 +80,16 @@ void Table::toggle_flag(Vec2d point){
 
 bool Table::is_flag(Vec2d point){
 	return !_table[point.x][point.y].hasFlag;
+}
+
+bool Table::is_mine(Vec2d point){
+  return _table[point.x][point.y].hasMine;
+}
+
+const char Table::adjacent_mines(Vec2d point){
+  return static_cast<const char>(_table[point.x][point.y].adjacentMines);
+}
+
+bool Table::is_revealed(Vec2d point){
+  return _table[point.x][point.y].isRevealed;
 }
