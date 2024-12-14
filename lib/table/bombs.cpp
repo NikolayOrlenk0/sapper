@@ -1,6 +1,5 @@
 #include "bombs.h"
-
-using namespace std;
+#include <cstdlib>
 
 void Bombs::bomb_XY(int n){
     for(int i = 0; i < n; i++){

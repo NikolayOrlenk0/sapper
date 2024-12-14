@@ -1,7 +1,5 @@
 #pragma once
 
-using namespace std;
-
 struct Cell
 {
     bool hasMine = false;       // Есть ли мина
