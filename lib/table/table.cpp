@@ -1,11 +1,15 @@
+#include "bombs.h"
 #include "table.h"
 #include <iostream>
 #include <queue>
+#include <vector>
+
 
 using namespace std;
 
 void Table::fill_table(Vec2d bomb){
     _table[bomb.x][bomb.y].hasMine = true;
+    _table[bomb.x][bomb.y].adjacentMines = -1;
     for(int dx = -1; dx < 2; dx++){
         for(int dy = -1; dy < 2; dy++){
             if(dx != 0 || dy != 0) {
@@ -36,7 +40,8 @@ vector<Vec2d> Table::open_nulls(Vec2d point){
 
                         if ((!_table[point.x + dx][point.y + dy].isRevealed) &&
                             (Vec2d(point.x + dx, point.y + dy) != prev) &&
-                            (_table[prev.x][prev.y].adjacentMines == 0 || (prev.x == -1 && prev.y == -1))) {
+                            (_table[prev.x][prev.y].adjacentMines == 0 || (prev.x == -1 && prev.y == -1))
+                          ) {
                             nulls.push(make_pair(Vec2d(point.x + dx, point.y + dy), point));
                             _table[point.x + dx][point.y + dy].isRevealed = true;
                         }
@@ -50,11 +55,20 @@ vector<Vec2d> Table::open_nulls(Vec2d point){
 }
 
 
-std::vector<Cell>& Table::operator[](size_t i){
-    return _table[i];
-}
+//std::vector<Cell>& Table::operator[](size_t i){
+//    return _table[i];
+//}
 
 
 int Table::size(){
     return _table.size();
+}
+
+void Table::toggle_flag(Vec2d point){
+  _table[point.x][point.y].hasFlag = !_table[point.x][point.y].hasFlag;
+
+}
+
+bool Table::is_flag(Vec2d point){
+	return !_table[point.x][point.y].hasFlag;
 }
