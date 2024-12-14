@@ -6,8 +6,8 @@ using namespace std;
 
 
 int main(){
-    constexpr int n = 5;
-    constexpr int m = 4;
+    constexpr int n = 15;
+    constexpr int m = 10;
     Table table(n, m);
     for(int i = 0; i < table.size(); i++) {
         for (int j = 0; j < table[i].size(); j++){
@@ -21,9 +21,9 @@ int main(){
         cout << '\n';
     }
     const auto t = table.open_cells(Vec2d(0, 4));
-    cout << table[0][1].adjacentMines << '\n';
+    cout << t.size() << '\n';
     for(const auto& i : t){
-        cout << i.x << " " << i.y << '\n';
+        cout << i.first << " " << i.second << '\n';
     }
     return 0;
 }

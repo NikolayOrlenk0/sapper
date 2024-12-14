@@ -1,7 +1,0 @@
-/Users/ivan/Documents/GitHub/sapper/build/CMakeFiles/sapper.dir
-/Users/ivan/Documents/GitHub/sapper/build/CMakeFiles/edit_cache.dir
-/Users/ivan/Documents/GitHub/sapper/build/CMakeFiles/rebuild_cache.dir
-/Users/ivan/Documents/GitHub/sapper/build/CMakeFiles/list_install_components.dir
-/Users/ivan/Documents/GitHub/sapper/build/CMakeFiles/install.dir
-/Users/ivan/Documents/GitHub/sapper/build/CMakeFiles/install/local.dir
-/Users/ivan/Documents/GitHub/sapper/build/CMakeFiles/install/strip.dir

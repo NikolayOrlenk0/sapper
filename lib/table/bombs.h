@@ -5,6 +5,6 @@
 class Bombs{
 public:
     std::vector<Vec2d> bombs_kord;
-    void bomb_XY(int n);
+    void bomb_XY(int n, int m);
     int size();
 };

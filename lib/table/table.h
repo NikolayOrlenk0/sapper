@@ -5,6 +5,7 @@
 #include <iostream>
 #include <ostream>
 #include "grid/grid.h"
+#include <set>
 
 
 class Table{
@@ -14,14 +15,14 @@ public:
     Table(int n, int m){
         _table.resize(n, std::vector<Cell>(n));
         Bombs bombs_kord;
-        bombs_kord.bomb_XY(m);
+        bombs_kord.bomb_XY(n, m);
         for(auto i : bombs_kord.bombs_kord){
             fill_table(i);
         }
     }
 
     void fill_table(Vec2d bomb);
-    std::vector<Vec2d> open_cells(Vec2d point);
+    std::set<std::pair<int, int>> open_cells(Vec2d point);
     int size();
     std::vector<Cell>& operator[](size_t i) {
             return _table[i];

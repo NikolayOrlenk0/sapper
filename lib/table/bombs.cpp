@@ -1,8 +1,8 @@
 #include "bombs.h"
 #include <cstdlib>
 
-void Bombs::bomb_XY(int n){
-    for(int i = 0; i < n; i++){
+void Bombs::bomb_XY(int n, int m){
+    for(int i = 0; i < m; i++){
         int id = rand() % (n * n);
         int x = id % n;
         int y = (id / n) % n;
