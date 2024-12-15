@@ -40,7 +40,11 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "sapper::@6890427a1f51a3e7e1df",
+<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-7f77918fdf925b7170fe.json
 					"jsonFile" : "target-sapper-Debug-f9b3dc18647f85c7fb65.json",
+========
+					"jsonFile" : "target-sapper-Debug-2a2bd7c27327fe240437.json",
+>>>>>>>> refs/remotes/origin/Ivan:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-f17607c4e8b3b5db2279.json
 					"name" : "sapper",
 					"projectIndex" : 0
 				}

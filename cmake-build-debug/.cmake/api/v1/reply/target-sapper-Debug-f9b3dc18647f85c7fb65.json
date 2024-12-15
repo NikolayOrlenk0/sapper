@@ -39,12 +39,23 @@
 			{
 				"command" : 2,
 				"file" : 0,
+<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/target-sapper-Debug-f9b3dc18647f85c7fb65.json
 				"line" : 26,
+========
+				"line" : 29,
 				"parent" : 0
 			},
 			{
 				"command" : 3,
 				"file" : 0,
+				"line" : 27,
+>>>>>>>> refs/remotes/origin/Ivan:cmake-build-debug/.cmake/api/v1/reply/target-sapper-Debug-2a2bd7c27327fe240437.json
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/target-sapper-Debug-f9b3dc18647f85c7fb65.json
 				"line" : 24,
 				"parent" : 0
 			},
@@ -52,6 +63,9 @@
 				"command" : 3,
 				"file" : 0,
 				"line" : 25,
+========
+				"line" : 28,
+>>>>>>>> refs/remotes/origin/Ivan:cmake-build-debug/.cmake/api/v1/reply/target-sapper-Debug-2a2bd7c27327fe240437.json
 				"parent" : 0
 			}
 		]
@@ -187,6 +201,13 @@
 			"sourceIndexes" : 
 			[
 				4
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				9
 			]
 		}
 	],
