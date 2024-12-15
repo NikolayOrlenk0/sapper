@@ -5,17 +5,20 @@
 #include <iostream>
 #include <ostream>
 #include "grid/grid.h"
+#include<table/settings.h>
 #include <set>
 
 
 class Table{
 private:
     std::vector<std::vector<Cell>> _table;
+    int flags_counter;
 public:
-    Table(int n, int m){
-        _table.resize(n, std::vector<Cell>(n));
+    Settings settings;
+    Table(){
+        _table.resize(settings.GRID_HEIGHT, std::vector<Cell>(settings.GRID_WIDTH));
         Bombs bombs_kord;
-        bombs_kord.bomb_XY(n, m);
+        bombs_kord.bomb_XY(settings.GRID_HEIGHT, settings.GRID_WIDTH, settings.COUNT_OF_BOMBS);
         for(auto i : bombs_kord.bombs_kord){
             fill_table(i);
         }
@@ -32,6 +35,8 @@ public:
     bool is_mine(Vec2d point);
     std::string adjacent_mines(Vec2d point);
     bool is_revealed(Vec2d point);
+    void regeneration_table();
+    bool check_win();
 };
 
 

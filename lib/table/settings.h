@@ -1,3 +1,4 @@
+#pragma once
 struct Settings
 {
     int GRID_WIDTH = 15;

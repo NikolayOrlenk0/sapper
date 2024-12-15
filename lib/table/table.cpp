@@ -6,6 +6,17 @@
 #include <string>
 #include <set>
 
+void Table::regeneration_table(){
+        _table.clear();
+        _table.resize(settings.GRID_HEIGHT, std::vector<Cell>(settings.GRID_WIDTH));
+        Bombs bombs_kord;
+        bombs_kord.bomb_XY(settings.GRID_HEIGHT, settings.GRID_WIDTH, settings.COUNT_OF_BOMBS);
+        for(auto i : bombs_kord.bombs_kord){
+            fill_table(i);
+        }
+}
+
+
 
 void Table::fill_table(Vec2d bomb){
     _table[bomb.x][bomb.y].hasMine = true;
@@ -27,7 +38,7 @@ void Table::fill_table(Vec2d bomb){
 std::set<std::pair<int, int>> Table::open_cells(Vec2d point){
   	std::set<std::pair<int, int>> v;
   	if(_table[point.x][point.y].hasMine){
-          std::cerr << "YOU ARE DOLBAEB" << std::endl;
+          std::cerr << "YOU LOOSE" << std::endl;
     }
     else if(_table[point.x][point.y].adjacentMines > 0){
     	v.insert(std::make_pair(point.x, point.y));
@@ -42,16 +53,13 @@ std::set<std::pair<int, int>> Table::open_cells(Vec2d point){
         nulls.pop();
         for (int dx = -1; dx < 2; dx++) {
             for (int dy = -1; dy < 2; dy++) {
-                if (labs(dx) != labs(dy)) {
-                    if ((0 <= point.x + dx && point.x + dx < _table.size()) &&
-                    (0 <= point.y + dy && point.y + dy < _table[0].size())) {
-
-                        if ((!_table[point.x + dx][point.y + dy].isRevealed) &&
-                          (!_table[point.x + dx][point.y + dy].hasMine) &&
-                          (_table[point.x][point.y].adjacentMines == 0 || (prev.x == -1 && prev.y == -1))){
-                            nulls.push(std::make_pair(Vec2d(point.x + dx, point.y + dy), point));
-                            _table[point.x][point.y].isRevealed = true;
-                        }
+                if ((0 <= point.x + dx && point.x + dx < _table.size()) &&
+                (0 <= point.y + dy && point.y + dy < _table[0].size())) {
+                    if ((!_table[point.x + dx][point.y + dy].isRevealed) &&
+                      (!_table[point.x + dx][point.y + dy].hasMine) &&
+                      (_table[point.x][point.y].adjacentMines == 0 || (prev.x == -1 && prev.y == -1))){
+                        nulls.push(std::make_pair(Vec2d(point.x + dx, point.y + dy), point));
+                        _table[point.x][point.y].isRevealed = true;
                     }
                 }
             }
@@ -71,9 +79,17 @@ int Table::size(){
 
 void Table::toggle_flag(Vec2d point){
   _table[point.x][point.y].hasFlag = !_table[point.x][point.y].hasFlag;
-
 }
-
+bool Table::check_win(){
+  for(int i = 0; i < _table.size(); i++){
+    for(int j = 0; j < _table[i].size(); j++){
+      if( !(_table[i][j].hasFlag) || !(_table[i][j].hasMine)){
+        return false;
+      }
+    }
+  }
+  return true;
+}
 bool Table::is_flag(Vec2d point){
 	return _table[point.x][point.y].hasFlag;
 }
@@ -89,3 +105,4 @@ std::string Table::adjacent_mines(Vec2d point){
 bool Table::is_revealed(Vec2d point){
   return _table[point.x][point.y].isRevealed;
 }
+
