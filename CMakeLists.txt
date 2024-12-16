@@ -10,10 +10,8 @@ add_executable(sapper
 #        tests/main.cpp
         src/main.cpp
         lib/table/grid/grid.h
-#        lib/front_table/game_grid.h
-#        lib/front_table/game_grid.cpp
-
-
+        lib/front_table/game_grid.h
+        lib/front_table/game_grid.cpp
 )
 
 set(TARGET "sapper")

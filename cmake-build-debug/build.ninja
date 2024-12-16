@@ -49,12 +49,47 @@ cmake_ninja_workdir = /Users/ivan/Documents/GitHub/sapper/cmake-build-debug/
 
 build cmake_object_order_depends_target_sapper: phony || .
 
+build CMakeFiles/sapper.dir/lib/Graph_lib/Graph.cpp.o: CXX_COMPILER__sapper_unscanned_Debug /Users/ivan/Documents/GitHub/sapper/lib/Graph_lib/Graph.cpp || cmake_object_order_depends_target_sapper
+  DEP_FILE = CMakeFiles/sapper.dir/lib/Graph_lib/Graph.cpp.o.d
+  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk -fcolor-diagnostics
+  INCLUDES = -isystem /opt/homebrew/include -F/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/System/Library/Frameworks -isystem /Users/ivan/Documents/GitHub/sapper/lib
+  OBJECT_DIR = CMakeFiles/sapper.dir
+  OBJECT_FILE_DIR = CMakeFiles/sapper.dir/lib/Graph_lib
+
+build CMakeFiles/sapper.dir/lib/Graph_lib/GUI.cpp.o: CXX_COMPILER__sapper_unscanned_Debug /Users/ivan/Documents/GitHub/sapper/lib/Graph_lib/GUI.cpp || cmake_object_order_depends_target_sapper
+  DEP_FILE = CMakeFiles/sapper.dir/lib/Graph_lib/GUI.cpp.o.d
+  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk -fcolor-diagnostics
+  INCLUDES = -isystem /opt/homebrew/include -F/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/System/Library/Frameworks -isystem /Users/ivan/Documents/GitHub/sapper/lib
+  OBJECT_DIR = CMakeFiles/sapper.dir
+  OBJECT_FILE_DIR = CMakeFiles/sapper.dir/lib/Graph_lib
+
+build CMakeFiles/sapper.dir/lib/Graph_lib/Window.cpp.o: CXX_COMPILER__sapper_unscanned_Debug /Users/ivan/Documents/GitHub/sapper/lib/Graph_lib/Window.cpp || cmake_object_order_depends_target_sapper
+  DEP_FILE = CMakeFiles/sapper.dir/lib/Graph_lib/Window.cpp.o.d
+  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk -fcolor-diagnostics
+  INCLUDES = -isystem /opt/homebrew/include -F/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/System/Library/Frameworks -isystem /Users/ivan/Documents/GitHub/sapper/lib
+  OBJECT_DIR = CMakeFiles/sapper.dir
+  OBJECT_FILE_DIR = CMakeFiles/sapper.dir/lib/Graph_lib
+
 build CMakeFiles/sapper.dir/lib/vec/vec2d.cpp.o: CXX_COMPILER__sapper_unscanned_Debug /Users/ivan/Documents/GitHub/sapper/lib/vec/vec2d.cpp || cmake_object_order_depends_target_sapper
   DEP_FILE = CMakeFiles/sapper.dir/lib/vec/vec2d.cpp.o.d
   FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk -fcolor-diagnostics
   INCLUDES = -isystem /opt/homebrew/include -F/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/System/Library/Frameworks -isystem /Users/ivan/Documents/GitHub/sapper/lib
   OBJECT_DIR = CMakeFiles/sapper.dir
   OBJECT_FILE_DIR = CMakeFiles/sapper.dir/lib/vec
+
+build CMakeFiles/sapper.dir/lib/poly/poly.cpp.o: CXX_COMPILER__sapper_unscanned_Debug /Users/ivan/Documents/GitHub/sapper/lib/poly/poly.cpp || cmake_object_order_depends_target_sapper
+  DEP_FILE = CMakeFiles/sapper.dir/lib/poly/poly.cpp.o.d
+  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk -fcolor-diagnostics
+  INCLUDES = -isystem /opt/homebrew/include -F/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/System/Library/Frameworks -isystem /Users/ivan/Documents/GitHub/sapper/lib
+  OBJECT_DIR = CMakeFiles/sapper.dir
+  OBJECT_FILE_DIR = CMakeFiles/sapper.dir/lib/poly
+
+build CMakeFiles/sapper.dir/lib/Graph_lib/ext/graph.cpp.o: CXX_COMPILER__sapper_unscanned_Debug /Users/ivan/Documents/GitHub/sapper/lib/Graph_lib/ext/graph.cpp || cmake_object_order_depends_target_sapper
+  DEP_FILE = CMakeFiles/sapper.dir/lib/Graph_lib/ext/graph.cpp.o.d
+  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk -fcolor-diagnostics
+  INCLUDES = -isystem /opt/homebrew/include -F/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/System/Library/Frameworks -isystem /Users/ivan/Documents/GitHub/sapper/lib
+  OBJECT_DIR = CMakeFiles/sapper.dir
+  OBJECT_FILE_DIR = CMakeFiles/sapper.dir/lib/Graph_lib/ext
 
 build CMakeFiles/sapper.dir/lib/table/bombs.cpp.o: CXX_COMPILER__sapper_unscanned_Debug /Users/ivan/Documents/GitHub/sapper/lib/table/bombs.cpp || cmake_object_order_depends_target_sapper
   DEP_FILE = CMakeFiles/sapper.dir/lib/table/bombs.cpp.o.d
@@ -85,7 +120,7 @@ build CMakeFiles/sapper.dir/src/main.cpp.o: CXX_COMPILER__sapper_unscanned_Debug
 #############################################
 # Link the executable sapper
 
-build sapper: CXX_EXECUTABLE_LINKER__sapper_Debug CMakeFiles/sapper.dir/lib/vec/vec2d.cpp.o CMakeFiles/sapper.dir/lib/table/bombs.cpp.o CMakeFiles/sapper.dir/lib/table/table.cpp.o CMakeFiles/sapper.dir/src/main.cpp.o | /opt/homebrew/lib/libfltk_images.dylib /opt/homebrew/lib/libfltk_forms.dylib /opt/homebrew/lib/libfltk_gl.dylib /opt/homebrew/lib/libfltk.dylib
+build sapper: CXX_EXECUTABLE_LINKER__sapper_Debug CMakeFiles/sapper.dir/lib/Graph_lib/Graph.cpp.o CMakeFiles/sapper.dir/lib/Graph_lib/GUI.cpp.o CMakeFiles/sapper.dir/lib/Graph_lib/Window.cpp.o CMakeFiles/sapper.dir/lib/vec/vec2d.cpp.o CMakeFiles/sapper.dir/lib/poly/poly.cpp.o CMakeFiles/sapper.dir/lib/Graph_lib/ext/graph.cpp.o CMakeFiles/sapper.dir/lib/table/bombs.cpp.o CMakeFiles/sapper.dir/lib/table/table.cpp.o CMakeFiles/sapper.dir/src/main.cpp.o | /opt/homebrew/lib/libfltk_images.dylib /opt/homebrew/lib/libfltk_forms.dylib /opt/homebrew/lib/libfltk_gl.dylib /opt/homebrew/lib/libfltk.dylib
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk
   LINK_LIBRARIES = -framework Carbon -framework Cocoa -framework ApplicationServices -lz  /opt/homebrew/lib/libfltk_images.dylib  /opt/homebrew/lib/libfltk_forms.dylib  /opt/homebrew/lib/libfltk_gl.dylib  -framework OpenGL  /opt/homebrew/lib/libfltk.dylib
   OBJECT_DIR = CMakeFiles/sapper.dir

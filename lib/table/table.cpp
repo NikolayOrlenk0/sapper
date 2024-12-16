@@ -6,6 +6,7 @@
 #include <string>
 #include <set>
 
+
 void Table::regeneration_table(){
         _table.clear();
         _table.resize(settings.GRID_HEIGHT, std::vector<Cell>(settings.GRID_WIDTH));
@@ -15,7 +16,6 @@ void Table::regeneration_table(){
             fill_table(i);
         }
 }
-
 
 
 void Table::fill_table(Vec2d bomb){
@@ -70,12 +70,10 @@ std::set<std::pair<int, int>> Table::open_cells(Vec2d point){
 }
 
 
-
-
-
 int Table::size(){
     return _table.size();
 }
+
 
 void Table::toggle_flag(Vec2d point){
   _table[point.x][point.y].hasFlag = !_table[point.x][point.y].hasFlag;
@@ -90,19 +88,28 @@ bool Table::check_win(){
   }
   return true;
 }
+
+
 bool Table::is_flag(Vec2d point){
 	return _table[point.x][point.y].hasFlag;
 }
+
 
 bool Table::is_mine(Vec2d point){
   return _table[point.x][point.y].hasMine;
 }
 
-std::string Table::adjacent_mines(Vec2d point){
-  return std::to_string(_table[point.x][point.y].adjacentMines);
+
+int Table::adjacent_mines(Vec2d point){
+  return _table[point.x][point.y].adjacentMines;
 }
+
 
 bool Table::is_revealed(Vec2d point){
   return _table[point.x][point.y].isRevealed;
 }
 
+
+std::vector<Cell>& Table::operator[](size_t i){
+  return _table[i];
+}

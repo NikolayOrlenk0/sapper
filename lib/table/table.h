@@ -33,7 +33,7 @@ public:
     void toggle_flag(Vec2d point);
     bool is_flag(Vec2d point);
     bool is_mine(Vec2d point);
-    std::string adjacent_mines(Vec2d point);
+    int adjacent_mines(Vec2d point);
     bool is_revealed(Vec2d point);
     void regeneration_table();
     bool check_win();

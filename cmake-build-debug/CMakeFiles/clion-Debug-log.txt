@@ -1,5 +1,5 @@
 /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/aarch64/ninja -G Ninja -S /Users/ivan/Documents/GitHub/sapper -B /Users/ivan/Documents/GitHub/sapper/cmake-build-debug
--- Configuring done (0.1s)
+-- Configuring done (0.3s)
 -- Generating done (0.0s)
 -- Build files have been written to: /Users/ivan/Documents/GitHub/sapper/cmake-build-debug
-CMake File API: /Users/ivan/Documents/GitHub/sapper/cmake-build-debug: failed to load from '/Users/ivan/Documents/GitHub/sapper/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-7f77918fdf925b7170fe.json'
+CMake File API: /Users/ivan/Documents/GitHub/sapper/cmake-build-debug: failed to load from '/Users/ivan/Documents/GitHub/sapper/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-f17607c4e8b3b5db2279.json'
