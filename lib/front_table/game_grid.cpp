@@ -8,6 +8,8 @@ Vec2d GameGrid::search_coords(Fl_Button *button)
 
 void GameGrid::check_win()
 {
+    std::cout << "Check" << std::endl;
+    std::cout << this->table.check_win() << std::endl;
     if (this->table.check_win())
         {
             this->win();
@@ -17,7 +19,11 @@ void GameGrid::check_win()
 void GameGrid::cb_cell(Fl_Widget *button, void *data)
 {   
     GameGrid *ptr = static_cast<GameGrid*>(data);
-
+    if (ptr->first_check == false)
+    {
+        ptr->table.regeneration_table(ptr->search_coords(static_cast<Fl_Button*>(button)));
+        ptr->first_check = true;
+    }
     if (Fl::event_button() == FL_RIGHT_MOUSE)
         ptr->toggle_flag(static_cast<Fl_Button*>(button));
 
@@ -33,7 +39,8 @@ void GameGrid::toggle_flag(Fl_Button* button)
         --count_flags;
         button->label("F");
         table.toggle_flag(coord);
-        this->flag_counter();
+        this->change_count_flags();
+        std::cout << count_flags << std::endl;
         if (count_flags == 0)
         {
             this->check_win();
@@ -46,7 +53,7 @@ void GameGrid::toggle_flag(Fl_Button* button)
         ++count_flags;
         button->label("");
         table.toggle_flag(coord);
-        this->flag_counter();
+        this->change_count_flags();
         return;
     }
 }
@@ -112,6 +119,7 @@ void GameGrid::timer_callback(void* data)
 void GameGrid::update_timer() 
 {
     if (!(this -> is_game_start)) return;
+    this->timerOutput->textsize(24);
     time_t currentTime = time(nullptr);
     int elapsed = static_cast<int>(currentTime - startTime);
 
@@ -130,6 +138,7 @@ void GameGrid::reset_game(std::string text)
 {
     this->window->hide();
     this->is_game_start = false;
+    this->first_check = false;
     delete this->window;
     this->window = new Fl_Window(200,200);
     Fl_Button *restart = new Fl_Button(50, 125, 100, 50, "Restart");
@@ -146,25 +155,26 @@ void GameGrid::reset_game(std::string text)
     this->window->show();
 }
 
-void GameGrid::flag_counter()
+void GameGrid::change_count_flags()
 {
     this->flagCounter->value(std::to_string(this->count_flags).c_str());
+    this->flagCounter->textsize(24);
 }
 void GameGrid::start_game()
 {
     this->is_game_start = true;
-    this->table.regeneration_table();
     this->count_flags = settings.COUNT_OF_BOMBS;
     this->startTime = time(nullptr);
+    
     this->window = new Fl_Window(1000, 700, "MineSweeper");
-    this->timerOutput = new Fl_Output(700, 30, 100, 30, "Timer");
-    this->timerOutput->textsize(24);
-    this->flagCounter->textsize(24);
-    this->flagCounter = new Fl_Output(700, 80, 100, 30, "Flags");
-    this->flag_counter();
-    this->timer_callback(this);
     this->draw_grid();
-    startTime = time(nullptr);
+
+    this->timerOutput = new Fl_Output(700, 30, 100, 30, "Timer");
+    this->timer_callback(this);
+
+    this->flagCounter = new Fl_Output(700, 80, 100, 30, "Flags");
+    this->change_count_flags();
+    
     this->window->end();
     this->window->show();
 }

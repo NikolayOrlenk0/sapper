@@ -25,13 +25,14 @@ struct GameGrid
     public:
 
     GameGrid(Table tab): table(tab) {}
-
+    
     Table table;
     void menu();
 
 
     private:
     bool is_game_start = false;
+    bool first_check = false;
     Settings settings;
     std::vector<std::vector<Fl_Button*>> grid{settings.GRID_HEIGHT, std::vector<Fl_Button*>(settings.GRID_WIDTH)};
     int count_flags = settings.COUNT_OF_BOMBS;
@@ -46,7 +47,7 @@ struct GameGrid
     static void timer_callback(void* data);
 
     void update_timer();
-    void flag_counter();
+    void change_count_flags();
     void start_game();
     void reset_game(std::string text);
     void draw_grid();

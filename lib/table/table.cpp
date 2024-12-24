@@ -7,11 +7,24 @@
 #include <set>
 
 
-void Table::regeneration_table(){
+void Table::regeneration_table(Vec2d point){
         _table.clear();
         _table.resize(settings.GRID_HEIGHT, std::vector<Cell>(settings.GRID_WIDTH));
         Bombs bombs_kord;
         bombs_kord.bomb_XY(settings.GRID_HEIGHT, settings.GRID_WIDTH, settings.COUNT_OF_BOMBS);
+        while (1) {
+            bool all_unik = true;
+            for (auto &i: bombs_kord.bombs_kord) {
+                if ((point.x - 1 <= i.x && point.x + 1 >= i.x) && (point.y - 1 <= i.y && point.y + 1 >= i.y)) {
+                    bombs_kord.bombs_kord.clear();
+                    bombs_kord.bomb_XY(settings.GRID_HEIGHT, settings.GRID_WIDTH, settings.COUNT_OF_BOMBS);
+                    all_unik = false;
+                }
+            }
+            if (all_unik) {
+                break;
+            }
+        }
         for(auto i : bombs_kord.bombs_kord){
             fill_table(i);
         }
@@ -56,7 +69,7 @@ std::set<std::pair<int, int>> Table::open_cells(Vec2d point){
                 if ((0 <= point.x + dx && point.x + dx < _table.size()) &&
                 (0 <= point.y + dy && point.y + dy < _table[0].size())) {
                     if ((!_table[point.x + dx][point.y + dy].isRevealed) &&
-                      (!_table[point.x + dx][point.y + dy].hasMine) &&
+                      (!_table[point.x + dx][point.y + dy].hasMine) && (!_table[point.x + dx][point.y + dy].hasFlag) &&
                       (_table[point.x][point.y].adjacentMines == 0 || (prev.x == -1 && prev.y == -1))){
                         nulls.push(std::make_pair(Vec2d(point.x + dx, point.y + dy), point));
                         _table[point.x][point.y].isRevealed = true;
@@ -78,15 +91,21 @@ int Table::size(){
 void Table::toggle_flag(Vec2d point){
   _table[point.x][point.y].hasFlag = !_table[point.x][point.y].hasFlag;
 }
+
+
 bool Table::check_win(){
-  for(int i = 0; i < _table.size(); i++){
-    for(int j = 0; j < _table[i].size(); j++){
-      if( !(_table[i][j].hasFlag) || !(_table[i][j].hasMine)){
-        return false;
-      }
+    int counter = 0;
+    for(int i = 0; i < _table.size(); i++){
+        for(int j = 0; j < _table[i].size(); j++){
+            if( (_table[i][j].hasFlag) && (_table[i][j].hasMine)){
+                counter++;
+            }
+        }
     }
+  if (counter == settings.COUNT_OF_BOMBS) {
+      return true;
   }
-  return true;
+    return false;
 }
 
 

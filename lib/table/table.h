@@ -24,18 +24,18 @@ public:
         }
     }
 
+
+
     void fill_table(Vec2d bomb);
     std::set<std::pair<int, int>> open_cells(Vec2d point);
     int size();
-    std::vector<Cell>& operator[](size_t i) {
-            return _table[i];
-    }
+    std::vector<Cell>& operator[](size_t i);
     void toggle_flag(Vec2d point);
     bool is_flag(Vec2d point);
     bool is_mine(Vec2d point);
     int adjacent_mines(Vec2d point);
     bool is_revealed(Vec2d point);
-    void regeneration_table();
+    void regeneration_table(Vec2d);
     bool check_win();
 };
 

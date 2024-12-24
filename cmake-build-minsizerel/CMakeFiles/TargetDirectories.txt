@@ -1,0 +1,7 @@
+/Users/ivan/CLionProjects/sapper 3/cmake-build-minsizerel/CMakeFiles/sapper.dir
+/Users/ivan/CLionProjects/sapper 3/cmake-build-minsizerel/CMakeFiles/edit_cache.dir
+/Users/ivan/CLionProjects/sapper 3/cmake-build-minsizerel/CMakeFiles/rebuild_cache.dir
+/Users/ivan/CLionProjects/sapper 3/cmake-build-minsizerel/CMakeFiles/list_install_components.dir
+/Users/ivan/CLionProjects/sapper 3/cmake-build-minsizerel/CMakeFiles/install.dir
+/Users/ivan/CLionProjects/sapper 3/cmake-build-minsizerel/CMakeFiles/install/local.dir
+/Users/ivan/CLionProjects/sapper 3/cmake-build-minsizerel/CMakeFiles/install/strip.dir

@@ -1,7 +1,7 @@
 #pragma once
 struct Settings
 {
-    int GRID_WIDTH = 15;
-    int GRID_HEIGHT = 15;
-    int COUNT_OF_BOMBS = 25;
+    const size_t GRID_WIDTH = 15;
+    const size_t GRID_HEIGHT = 15;
+    const int COUNT_OF_BOMBS = 40;
 };
